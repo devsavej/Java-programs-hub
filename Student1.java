@@ -1,50 +1,28 @@
-package Day6;
+package Day7;
 
-public class Student1 {
+public abstract class Student1 {
+    String Name;
+    String Address;
 
-    int Studid;
-    String name;
-    int departmentid;
-    String mobileno;
-    String gender;
+    Student1(){
 
-    public int getStudid() {
-        return Studid;
     }
 
-    public void setStudid(int studid) {
-        Studid = studid;
+
+    public Student1(String Name,String Address) {
+        this.Name = Name;
+        this.Address=Address;
     }
 
-    public String getName() {
-        return name;
+    public static int getTotalNoStudent(){
+        return Sciencestudent.noOfStudents+Historystudent.noOfStudent;
+
+
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
-    public int getDepartmentid() {
-        return departmentid;
-    }
+     abstract double getPercentage();
 
-    public void setDepartmentid(int departmentid) {
-        this.departmentid = departmentid;
-    }
 
-    public String getMobileno() {
-        return mobileno;
-    }
 
-    public void setMobileno(String mobileno) {
-        this.mobileno = mobileno;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
 }
